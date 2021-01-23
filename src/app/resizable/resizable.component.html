@@ -1,0 +1,11 @@
+<div class="resizable">
+  <div class="resizable__vertical">
+      <div class="resizable__vertical__horisontal">
+          <div class="resizable__vertical__horisontal__content">
+              <ng-content></ng-content>
+          </div>
+          <div *ngIf='resizeDirection === "horizontal"' class="bar resizable__vertical__horisontal__barRight" (resizable)="onResize($event)"></div>
+      </div>
+      <div *ngIf='resizeDirection === "vertical"'  id='bar-vertical' class="bar resizable__vertical__barBotton" (resizable)="onResize($event)"></div>
+  </div>
+</div>
